@@ -1,0 +1,17 @@
+**/.ipynb_checkpoints
+**/.vscode
+
+**/bin
+**/Scripts
+
+**/etc
+**/Include
+**/include
+
+**/Lib
+**/lib
+**/lib64
+**/share
+**/tmp
+
+**/pyenv.cfg
