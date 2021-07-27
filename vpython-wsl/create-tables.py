@@ -19,23 +19,37 @@ exercisesDDL = '''
 create table if not exists Exercises (
     id              int auto_increment primary key,
     exerciseName    varchar(40) not null
-0;
+);
 
 truncate table Exercises;
 
 insert into Exercises (exerciseName)
-values (''),
-(''),
-(''),
+values ('Bulgarian Split Squat'),
+('Overhead BB Press'),
+('Pendlay Row'),
+('SL KB RDL'),
+('Deadlift'),
+('Zercher Sq'),
+('Kneeling Landmine Pr'),
+('SA Bench Row'),
+('Farmers Carry'),
+('Bench Press'),
+('Front Squat'),
+('EZ Bicep Curl'),
+('SA Farmer Carry'),
+('Rear Squat'),
+('Power Clean'),
+('Rear Deltoid'),
+('Hanging Leg Raise');
 
 '''
 
 weightLiftingDDL = '''
-Create table WeightLifting ( 
+Create table if not exists WeightLifting ( 
      Id   int AUTO_INCREMENT PRIMARY KEY 
     ,date  datetime NOT NULL 
     ,exerciseId int NOT NULL 
-    ,category int NOT NULL 
+    ,categoryId int NOT NULL 
     ,cadence varchar(40) NOT NULL 
     ,weights varchar(50) NOT NULL 
     ,weightUnit char(3)  default 'lb' 
@@ -48,3 +62,5 @@ engine = create_engine(connStr, echo=True)
 
 with engine.connect() as conn:
     conn.execute(text(categoriesDDL))
+    conn.execute(text(exercisesDDL))
+    conn.execute(text(weightLiftingDDL))
