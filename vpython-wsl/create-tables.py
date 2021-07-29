@@ -40,7 +40,11 @@ values ('Bulgarian Split Squat'),
 ('Rear Squat'),
 ('Power Clean'),
 ('Rear Deltoid'),
-('Hanging Leg Raise');
+('Hanging Leg Raise'),
+('Sumo Deadlift'),
+('Pull Up'),
+('Dips'),
+('Weighted Step Up');
 
 '''
 
