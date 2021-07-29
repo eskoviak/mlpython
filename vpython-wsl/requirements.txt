@@ -1,0 +1,6 @@
+greenlet==1.1.0
+mysqlclient==2.0.3
+numpy==1.21.0
+SQLAlchemy==1.4.22
+torch==1.9.0
+typing-extensions==3.10.0.0
