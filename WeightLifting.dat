@@ -1,0 +1,8 @@
+Id	date	exerciseId	categoryId	cadence	weights	weightUnit	comments
+15	2021-07-25 10:00:00	18	1	1,3,4,1,3,4,2,4	225,225,225,235,235,245,255,255	lb	
+16	2021-07-25 10:00:00	19	1	1,3,4,1,3,4,2,4	Red/Blue	--	
+17	2021-07-25 10:00:00	20	2	3,4,7,3,5,7	Body Weight	--	
+18	2021-07-25 10:00:00	21	3	4,6,10,4,6,10,4,6	45,55,65,65,65,65,65,65	lb	
+19	2021-07-26 10:00:00	22	2	4x(1->3)	14	kg	superset w/swing
+20	2021-07-26 10:00:00	23	2	4x3x10	20	kg	superset with clean/press
+21	2021-07-26 10:00:00	24	2	10->1	superset with back crawl		NULL
