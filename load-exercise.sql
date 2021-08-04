@@ -4,11 +4,11 @@ create table if not exists Exercises (
 	description		text null
 );
 
-truncate table Exercises;
+delete from Exercises;
 
 insert into Exercises (exerciseName, description)
 values ('Bulgarian Split Squat',''),
-('Overhead BB Press','')
+('Overhead BB Press',''),
 ('Pendlay Row',''),
 ('SL KB RDL',''),
 ('Deadlift',''),
