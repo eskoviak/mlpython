@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS ChartOfAccounts (
+  id          INT AUTO_INCREMENT PRIMARY KEY,
+  category    VARCHAR(50) NOT NULL,
+  item        VARCHAR(50) NOT NULL
+);

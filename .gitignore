@@ -15,3 +15,5 @@
 **/tmp
 
 **/pyvenv.cfg
+
+**/.DS_store

@@ -5,4 +5,5 @@ docker run \
   -e MYSQL_ROOT_PASSWORD=terces \
   -v ~/data/mysql:/var/lib/mysql \
   -d mysql:latest \
-  --local-infile=1 
+  --local-infile=1 \
+  --secure-file-priv=/var/lib/mysql
