@@ -3,8 +3,8 @@ from sqlalchemy.orm import Session, registry, declarative_base, relationship
 from sqlalchemy.schema import Table
 import json
 
-with open('Weight History/input.json', 'r') as f:
-    inputjson  = json.load(f)
+#with open('Weight History/input.json', 'r') as f:
+#    inputjson  = json.load(f)
     
 #print (inputjson)
 
@@ -29,7 +29,7 @@ class Exercises(Base):
 class Categories(Base):
     __table__ = categories
 
-    weightLifting = relationship("WeightLifting", back_populates="category")
+    #weightLifting = relationship("WeightLifting", back_populates="category")
 
     def __repr__(self):
         return f"Categories(id={self.id!r}, categoryName={self.categoryName!r}"
@@ -37,7 +37,7 @@ class Categories(Base):
 class WeightLifting(Base):
     __table__ = weightLifting
 
-    category = relationship("Categories", back_populates="weightLifting")
+    #category = relationship("Categories", back_populates="weightLifting")
     #exercise = relationship("Exercises", back_populates="weightLifting")
 
     def __repr__(self):
@@ -45,7 +45,7 @@ class WeightLifting(Base):
 
 
 with Session(engine) as session:
-    stmt = select(WeightLifting).where(WeightLifting.date == '2021-09-04')
+    stmt = select(Categories)
     print(stmt)
     for row in session.execute(stmt):
         print(row)
