@@ -32,7 +32,13 @@ class Categories(Base):
     #weightLifting = relationship("WeightLifting", back_populates="category")
 
     def __repr__(self):
-        return f"Categories(id={self.id!r}, categoryName={self.categoryName!r}"
+        #return f"Categories(id={self.id!r}, categoryName={self.categoryName!r}"
+        #return (self.categoryName, self.id)
+        return f"({self.categoryName},{self.id})"
+
+    def __tuple__(self):
+        return (self.categoryName, self.id)
+
 
 class WeightLifting(Base):
     __table__ = weightLifting
@@ -46,7 +52,15 @@ class WeightLifting(Base):
 
 with Session(engine) as session:
     stmt = select(Categories)
-    print(stmt)
+    #print(stmt)
+
+    d = dict()
+    result = session.execute(stmt).scalars().all()
+    for row in result:
+        d[row.categoryName]=row.id
+    print(d)
+    '''
     for row in session.execute(stmt):
-        print(row)
+        row.__tuple__
+    '''
     session.commit()
